@@ -118,9 +118,8 @@
 
 .card__label {
 	position: absolute;
-	top: 9%;
-	right: -15%;
-	transform: translate(-50%, -50%);
+	top: 10px;
+	right: 20px;
 	padding: 10px;
 	color: var(--label-color);
 	mix-blend-mode: hard-light;
@@ -141,10 +140,10 @@
 .card__text-wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 25px;
-	line-height: 1.29rem;
+	gap: 26px;
+	line-height: 1.1667;
 	font-variation-settings: "wght" var(--main-font-wght-normal);
-	padding-top: 25px;
+	padding-top: 24px;
 	padding-left: 25px;
 	padding-right: 25px;
 }
@@ -154,8 +153,8 @@
 	justify-self: flex-end;
 	align-items: end;
 	gap: 4px;
-	padding-top: 42px;
-	padding-bottom: 31px;
+	padding-top: 41px;
+	padding-bottom: 25px;
 	padding-right: 23px;
 }
 
@@ -205,6 +204,10 @@
 	font-size: 14px;
 }
 
+.popup-dialog[open]::backdrop {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
 .popup-dialog svg {
 	width: 39px;
 	height: 39px;
@@ -212,16 +215,14 @@
 
 .popup-dialog[open] {
 	position: fixed;
-	top: 46%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	top: 0;
+	left: 17px;
+	right: 17px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 30px;
 }
-
-
 
 .popup-dialog__wrapper {
 	display: flex;
@@ -239,7 +240,9 @@
 .popup__title {
 	flex-grow: 1;
 	max-width: 234px;
-	line-height: 1.15em;
+	line-height: 1.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
 	color: var(--background-color);
 	mix-blend-mode: difference;
 }
@@ -382,18 +385,13 @@
 		height: 696px;
 	}
 
-	.card__label {
-		top: 4%;
-		right: -15%;
-	}
-
 	.sprint__card {
 		grid-template-rows: min-content 724px min-content;
 	}
 
 	.button-wrapper {
-		padding-top: 20px;
-		padding-bottom: 28px;
+		padding-top: 18px;
+		padding-bottom: 23px;
 		padding-right: 23px;
 		align-items: center;
 	}
@@ -404,7 +402,7 @@
 
 	.content__icon-button {
 		flex-direction: row;
-		margin: 40px auto;
+		margin: 48px auto;
 	}
 
 	.popup-dialog {
@@ -412,8 +410,9 @@
 	}
 
 	.popup-dialog[open] {
-		top: 50%;
-		left: 24%;
+		top: 0;
+		left: 543px;
+		right: 543px;
 	}
 
 	.popup-dialog__wrapper {
