@@ -20,6 +20,7 @@
 
 	--background-color: #ffffff;
 	--accent-color: #000000;
+	--background-color-backdrop: rgba(0, 0, 0, 0.75);
 	--heart-contour-color: #000000;
 	--animation-fill-color: #FF0000;
 	--animation-fill-core-color: #ffffff;

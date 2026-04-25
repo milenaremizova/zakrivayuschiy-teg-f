@@ -16,6 +16,7 @@
 	background-image: var(--background-image);
 	background-size: cover;
 	background-attachment: fixed;
+	background-color: var(--background-color);
 	font-family: var(--main-font), Arial, Helvetica, sans-serif;
 	font-size: var(--main-font-size);
 	font-variation-settings: "wght" var(--main-font-wght-normal);
@@ -28,7 +29,7 @@
 	width: var(--header-width);
 	background-color: var(--background-color);
 	border: var(--accent-color) solid 2px;
-	font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+	font-family: var(--accent-font), fantasy;
 	text-transform: uppercase;
 	text-align: center;
 	padding-top: var(--header-padding-vertical);
@@ -53,14 +54,14 @@
 	width: var(--header-width);
 	margin: 0 auto;
 	background-color: var(--background-color);
-	border: var(--accent-color) solid 2px;
 }
 
 .sprint__card {
 	display: grid;
 	grid-template-rows: min-content auto auto;
 	gap: 1px;
-	outline: var(--accent-color) 2px solid;
+	background-color: var(--background-color);
+	border: var(--accent-color) solid 2px;
 }
 
 .card__title {
@@ -118,13 +119,13 @@
 .card__label {
 	position: absolute;
 	top: 9%;
-	left: 80%;
+	right: -15%;
 	transform: translate(-50%, -50%);
 	padding: 10px;
 	color: var(--label-color);
 	mix-blend-mode: hard-light;
 	font-size: 14px;
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), fantasy;
 	text-shadow: 1px 1px 2px var(--label-text-stroke-color);
 }
 
@@ -167,7 +168,7 @@
 
 .button__text {
 	position: relative;
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), fantasy;
 	color: var(--background-color);
 	font-size: 14px;
 	line-height: 0.9em;
@@ -176,7 +177,7 @@
 	mix-blend-mode: difference;
 }
 
-.footer__icon-button {
+.content__icon-button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -186,19 +187,13 @@
 	padding: 17px 20px 17px 20px;
 }
 
-.footer__icon-button,
-.popup__button {
-	background-color: var(--background-color);
-	border: var(--accent-color) 2px solid;
-}
-
-.footer__icon-button svg {
+.content__icon-button svg {
 	width: 28px;
 	height: 28px;
 }
 
 .icon-button__text {
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), fantasy;
 	color: var(--background-color);
 	font-size: 14px;
 	mix-blend-mode: difference;
@@ -206,8 +201,7 @@
 
 .popup-dialog {
 	width: 341px;
-	min-height: 191px;
-	font-family: var(--accent-font);
+	font-family: var(--accent-font), fantasy;
 	font-size: 14px;
 }
 
@@ -226,6 +220,8 @@
 	align-items: center;
 	gap: 30px;
 }
+
+
 
 .popup-dialog__wrapper {
 	display: flex;
@@ -266,9 +262,7 @@
 	mix-blend-mode: difference;
 }
 
-.card__like-button,
-.footer__icon-button,
-.popup__button {
+.content__buttons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -276,6 +270,7 @@
 	overflow: hidden;
 	transition: box-shadow 0.3s ease;
 	background-color: var(--background-color);
+	border: var(--accent-color) 2px solid;
 }
 
 .card__icon-button {
@@ -283,9 +278,7 @@
 	transition: border 0.3s ease;
 }
 
-.card__like-button::before,
-.footer__icon-button::before,
-.popup__button::before {
+.content__buttons::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -297,16 +290,16 @@
 	transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:focus,
-.footer__icon-button:focus,
-.popup__button:focus {
+.content__buttons:focus {
 	outline: none;
-	box-shadow: 3px 3px 0 var(--accent-color);
 }
 
-.card__like-button:hover::before,
-.footer__icon-button:hover::before,
-.popup__button:hover::before {
+.content__buttons:focus-visible {
+	outline: none;
+	box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.content__buttons:hover::before {
 	transform: translateX(0);
 }
 
@@ -372,7 +365,7 @@
 }
 
 .like-icon.is-liked .heart {
-	animation: scale-heart 0.3s ease-in 0.1s forwards;
+	animation: scale-heart 0.3s ease-in 0.1s backwards;
 	transform-origin: center;
 }
 
@@ -391,7 +384,7 @@
 
 	.card__label {
 		top: 4%;
-		left: 90%;
+		right: -15%;
 	}
 
 	.sprint__card {
@@ -409,7 +402,7 @@
 		padding-top: 0;
 	}
 
-	.footer__icon-button {
+	.content__icon-button {
 		flex-direction: row;
 		margin: 40px auto;
 	}
